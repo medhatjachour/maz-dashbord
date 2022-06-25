@@ -54,7 +54,7 @@ const routes = [
     type: "collapse",
     name: "Products",
     key: "tables",
-    route: "/tables",
+    route: "/tables/*",
     icon: <Office size="12px" />,
     component: <Tables />,
     noCollapse: true,

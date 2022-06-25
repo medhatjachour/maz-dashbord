@@ -1,0 +1,47 @@
+.productForm .progress-pForm{
+    background-color: transparent;
+    border: 0px ;
+    color: rgb(143, 142, 142);
+    /* color: rgb(5, 113, 124); */
+    text-transform: capitalize;
+    line-height: 2;
+    margin-right: 7px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: .3s;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+.productForm .progress-pForm:hover{
+    transition: .7s;
+    color:  rgb(5, 113, 124);
+}
+.productForm .progress-pForm svg{
+    position: relative;
+    top: 12px;
+}
+.productForm .Step-three{
+    padding-top: 10px;
+}
+.productForm .Step-three svg{
+    color: transparent;
+    top: 7px;
+    left: 7px;
+}
+.active-f-color{
+    color:  rgb(5, 113, 124)!important;
+}
+.active-f-color svg{
+    color:  rgb(5, 113, 124)!important;
+}
+.none{
+    display: none;
+}
+.productForm .css-9tf19b-MuiFormLabel-root-MuiInputLabel-root{
+    font-size: 1rem!important;    
+    top: -8px;
+}
+.productForm .css-8nrica-MuiInputBase-root-MuiOutlinedInput-root input{
+    font-size: 1rem!important;
+    width: 99%!important;
+}
+

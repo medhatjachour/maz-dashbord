@@ -11,7 +11,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 // import Table from "examples/Tables/Table";
 import ProductTable from "examples/Tables/productTable";
-
+import ProductForm from "layouts/authentication/ProductPage/ProductForm";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 // import projectsTableData from "layouts/tables/data/projectsTableData";
@@ -23,6 +23,18 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
+      <SuiBox py={3}>
+        <SuiBox mb={3}>
+          <Card>
+            <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
+              <SuiTypography variant="h6">Insert product</SuiTypography>
+            </SuiBox>
+            <SuiBox>
+              <ProductForm/>
+            </SuiBox>
+          </Card>
+        </SuiBox>
+      </SuiBox>
       <SuiBox py={3}>
         <SuiBox mb={3}>
           <Card>
