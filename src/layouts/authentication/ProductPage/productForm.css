@@ -22,6 +22,12 @@
 .productForm .Step-three{
     padding-top: 10px;
 }
+.productForm textarea{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
 .productForm .Step-three svg{
     color: transparent;
     top: 7px;

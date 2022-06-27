@@ -26,10 +26,7 @@ import { red } from "@mui/material/colors";
 // import { createTheme, ThemeProvider } from "@mui/material/styles";
 import img from "../../../assets/images/bruce-mars.jpg";
 
-
-
-///*************************      our data is to objects one for the product and one for its sizes               */ */ 
-
+///*************************    our data is to objects one for the product and one for its sizes               */ */
 
 // here the card of each size and color
 const SizeCard = (props) => {
@@ -115,7 +112,7 @@ const ProductForm = () => {
   const [path, setPath] = useState("");
   const [Quantity, setQuantity] = useState(0);
   // and here is the array
-  const [sizeDetail, setSizeDetail] = useState([]); 
+  const [sizeDetail, setSizeDetail] = useState([]);
 
   // set the size
   const handleSizes = (event) => {
@@ -141,7 +138,7 @@ const ProductForm = () => {
       console.log(Reader.result);
     });
   };
-  // for pushing the data into my array 
+  // for pushing the data into my array
   function handleSize() {
     setSizeDetail([
       ...sizeDetail,
@@ -174,12 +171,13 @@ const ProductForm = () => {
       metaTitle: data.get("metaTitle"),
       category: data.get("category"),
       ProductType: data.get("ProductType") ? data.get("ProductType") : "Men",
-      description: data.get("description"),
+      // description: data.get("description"),
       priceIn: data.get("priceIn"),
       priceOut: data.get("priceOut"),
       discount: data.get("discount"),
     });
     console.log(data);
+    console.log(sizeDetail);
     setSizeDetail([]);
     setSize("");
     setColor("#000000");
@@ -297,46 +295,62 @@ const ProductForm = () => {
                 </Box>
               </SuiBox>
               <SuiBox p={2} className="none p-s-step" id="p-s-step">
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="priceIn"
-                    required
-                    fullWidth
-                    label="Price In" // whatever u wanna call it
-                    id="priceIn"
-                    type="number"
-                    autoFocus
-                  />
-                  <TextField
-                    name="priceOut"
-                    required
-                    fullWidth
-                    label="price Out" // whatever u wanna call it
-                    id="priceOut"
-                    type="number"
-                    autoFocus
-                  />
-                  <TextField
-                    name="discount"
-                    required
-                    fullWidth
-                    label="Discount" // whatever u wanna call it
-                    id="discount"
-                    type="number"
-                    autoFocus
-                  />
-                </Grid>
+                <Grid item xs={12} sm={12}>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="priceIn"
+                      required
+                      fullWidth
+                      label="Price In" // whatever u wanna call it
+                      id="priceIn"
+                      type="number"
+                      autoFocus
+                    />
+                    </Grid>
+                    
+                    <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="priceOut"
+                      required
+                      fullWidth
+                      label="price Out" // whatever u wanna call it
+                      id="priceOut"
+                      type="number"
+                      autoFocus
+                    /></Grid>
+                    <Grid item xs={12} sm={6}>
 
-                <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="discount"
+                      required
+                      fullWidth
+                      label="Discount" // whatever u wanna call it
+                      id="discount"
+                      type="number"
+                      autoFocus
+                    />
+                  </Grid>
+                  </Grid>
+
+                <Grid item xs={12} sm={12}>
                   <TextareaAutosize
                     aria-label="description"
-                    minRows={3}
+                    minRows={5}
                     name="description"
                     id="description"
                     placeholder="description"
-                    style={{ width: 200 }}
+                    // value="sasdsadsdsad"
                   />
                 </Grid>
+                </Grid>
+
               </SuiBox>
               <SuiBox p={2} className="none p-t-step " id="p-t-step">
                 <Typography className="alignLeft">SIZES</Typography>
